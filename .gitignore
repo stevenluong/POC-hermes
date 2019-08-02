@@ -1,0 +1,7 @@
+node/node_modules/
+reactjs/node_modules/
+*.swp
+*.sw
+reactjs/build/
+
+
