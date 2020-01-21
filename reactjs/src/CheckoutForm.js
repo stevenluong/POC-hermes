@@ -26,9 +26,10 @@ class CheckoutForm extends Component {
                           }
         });
         */
-        let response = await fetch("http://slapps.fr:9090/charge", {
+        //let response = await fetch("http://slapps.fr:9090/charge", {
+        let response = await fetch("https://hermes-node.slapps.fr/charge", {
             method: "POST",
-            mode: "no-cors",
+        //    mode: "no-cors",
             headers: {"Content-Type": "text/plain"},
             body: JSON.stringify({
                 token: token.id,
@@ -49,34 +50,34 @@ class CheckoutForm extends Component {
                 <Container>
                 <Form>
                 <Row>
-                <Col sm={4}>
+                <Col sm={3}>
                 <Form.Label>Name and Surname</Form.Label>
                 </Col>
-                <Col sm={8}>
+                <Col sm={9}>
                 <Form.Control type="text" placeholder="Your full name" ref={this.name}/>
                 </Col>
                 </Row>
                 <Row>
-                <Col sm={4}>
+                <Col sm={3}>
                 <Form.Label>Email address</Form.Label>
                 </Col>
-                <Col sm={8}>
+                <Col sm={9}>
                 <Form.Control type="email" placeholder="Your email" ref={this.email} />
                 </Col>
                 </Row>
                 <Row>
-                <Col sm={4}>
+                <Col sm={3}>
                 <Form.Label>Amount</Form.Label>
                 </Col>
-                <Col sm={8}>
+                <Col sm={9}>
                 <Form.Control type="number" placeholder="10.00" ref={this.amount}/>
                 </Col>
                 </Row>
                 <Row>
-                <Col sm={4}>
+                <Col sm={3}>
                 <Form.Label>Card details</Form.Label>
                 </Col>
-                <Col sm={8}>
+                <Col sm={9}>
                 <CardElement className="form-control" hidePostalCode={true} />
                 </Col>
                 </Row>
